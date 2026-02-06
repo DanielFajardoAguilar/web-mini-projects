@@ -21,6 +21,8 @@ Catálogo tipo streaming con tarjetas y búsqueda.
 - Carpeta: Peliculas/
 
 
+Dentro de docs/ se encuentran screenshots de los proyectos
+
 Nota: Cada proyecto tiene su propio index.html y recursos locales (CSS/JS/imagenes).
 
 ## Cómo ejecutar
