@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Café Aurora</title>
+
+  <!-- Enlace a CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: barra superior con logo + navegación -->
+  <header class="header">
+    <div class="container header__content">
+      <h1 class="logo">Café Aurora</h1>
+
+      <!-- Menú de navegación -->
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--Sección principal -->
+  <main id="inicio" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <h2>Tu pausa con café… sin drama.</h2>
+        <p>
+          Café de especialidad, pan artesanal y Wi-Fi decente.
+        </p>
+
+        <!-- Botón: hace scroll al menú -->
+        <a class="btn" href="#menu">Ver menú</a>
+      </div>
+
+	<img
+        class="hero__img"
+        src="img/cafe.jpg"
+        alt="Taza de café en mesa"
+      />
+    </div>
+  </main>
+
+  <!-- Sección Menú -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h3>Menú</h3>
+      <p class="muted">Nuestros precios:</p>
+
+      <!-- Grid con tarjetas -->
+      <div class="cards">
+        <article class="card">
+          <h4>Americano</h4>
+          <p>Clásico, el favorito de muchos.</p>
+          <span class="price">$45</span>
+        </article>
+
+        <article class="card">
+          <h4>Latte</h4>
+          <p>Espuma + felicidad.</p>
+          <span class="price">$60</span>
+        </article>
+
+        <article class="card">
+          <h4>Capuchino</h4>
+          <p>Equilibrio perfecto entre café y leche.</p>
+          <span class="price">$62</span>
+        </article>
+
+        <article class="card">
+          <h4>Pan de la casa</h4>
+          <p>Conchas y croissant..</p>
+          <span class="price">$35</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="section section--alt">
+    <div class="container about">
+      <div>
+        <h3>Nosotros</h3>
+        <p>
+          Somos un café de barrio con enfoque en calidad y atención simple.
+          Abrimos temprano porque el mundo insiste en madrugar.
+        </p>
+        <ul class="list">
+          <li>Granos seleccionados</li>
+          <li>Pan recién horneado</li>
+          <li>Área para estudiar/trabajar</li>
+        </ul>
+      </div>
+
+      <img
+        class="about__img"
+        src="img/cafe-interior.jpg"
+        alt="Interior de cafetería"
+      />
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h3>Contacto</h3>
+      <p class="muted">(Este formulario es demostrativo).</p>
+
+      <!-- Formulario: se valida mínimo con HTML (required) -->
+      <form class="form">
+        <label>
+          Nombre
+          <input type="text" placeholder="Tu nombre" required />
+        </label>
+
+        <label>
+          Correo
+          <input type="email" placeholder="tucorreo@ejemplo.com" required />
+        </label>
+
+        <label>
+          Mensaje
+          <textarea rows="4" placeholder="¿Qué necesitas?" required></textarea>
+        </label>
+
+        <!-- type="button" evita que intente enviar a servidor -->
+        <button type="button" class="btn btn--dark"
+          onclick="alert('Aquí se enviaría el formulario.')">
+          Enviar (demo)
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>©Café Aurora</small>
+    </div>
+  </footer>
+</body>
+</html>

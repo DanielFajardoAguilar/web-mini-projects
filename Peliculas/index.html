@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniFlix</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__content">
+      <div class="brand">MiniFlix</div>
+
+      <!-- Input de búsqueda (para filtrar en JS) -->
+      <input
+        id="search"
+        class="search"
+        type="text"
+        placeholder="Buscar título…"
+        aria-label="Buscar"
+      />
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="title">Explorar</h1>
+    <p class="muted">Catálogo</p>
+
+    <!-- Contenedor de tarjetas -->
+    <section id="grid" class="grid">
+      <!-- Cada card tiene data-title para filtrar-->
+      <article class="card" data-title="Matrix" />
+        <img src="img/Poster1.png" alt="Poster 1" />
+        <div class="card__body">
+          <h2>Matrix<//h2>
+          <p>Acción / Suspenso</p>
+          <span class="tag">HD</span>
+        </div>
+      </article>
+
+      <article class="card" data-title="Qué paso ayer">
+        <img src="img/poster2.jpg" alt="Poster 2" />
+        <div class="card__body">
+          <h2>Qué paso ayer</h2>
+          <p>Comedia</p>
+          <span class="tag">Nuevo</span>
+        </div>
+      </article>
+
+      <article class="card" data-title="El secretao del doctor Grinberg">
+        <img src="img/Poster3.jpg" alt="Poster 3" />
+        <div class="card__body">
+          <h2>El secretao del doctor Grinberg</h2>
+          <p>Documental</p>
+          <span class="tag">4K*</span>
+        </div>
+      </article>
+
+      <article class="card" data-title="Dune">
+        <img src="img/poster4.jpg" alt="Poster 4" />
+        <div class="card__body">
+          <h2>Dune</h2>
+          <p>Drama</p>
+          <span class="tag">Top</span>
+        </div>
+      </article>
+    </section>
+
+    <p id="status" class="status"></p>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>

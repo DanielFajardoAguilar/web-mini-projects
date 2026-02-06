@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renta de Andamios - Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header__content">
+      <h1 class="logo">Andamios Azules</h1>
+      <nav class="nav">
+        <a href="#info">Información</a>
+        <a href="#precios">Precios</a>
+        <a href="#contrato">Renta con nosotros</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO con imagen -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h2>Renta de andamios</h2>
+        <p class="muted">
+          Genera una cotización y/o un contrato.
+        </p>
+        <a class="btn" href="#contrato">Crear contrato</a>
+      </div>
+
+      <!-- Imagen de información de los andamios -->
+      <img class="hero__img" src="img/informacion.jpg" alt="Info Andamios" />
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section id="info" class="section">
+    <div class="wrap">
+      <h3>¿Quiénes somos?</h3>
+      <p>
+        Renta de andamios para obra, mantenimiento, pintura y eventos.
+	Tu seguridad es lo más importante, no te arriesges.
+      </p>
+
+      <div class="gallery">
+        <img src="img/andamio_uso1.jpg" alt="Andamio en uso 1" />
+        <img src="img/andamio_uso2.jpg" alt="Andamio en uso 2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="section section--alt">
+    <div class="wrap">
+      <h3>Precios por día</h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Unidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Andamio chico</td><td>$30</td><td>por día</td></tr>
+          <tr><td>Andamio grande</td><td>$35</td><td>por día</td></tr>
+          <tr><td>Plataforma metálica</td><td>$15</td><td>por día</td></tr>
+          <tr><td>Llantas (juego)</td><td>$35</td><td>por día</td></tr>
+        </tbody>
+      </table>
+
+      <p class="muted small">
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTRATO -->
+  <section id="contrato" class="section">
+    <div class="wrap">
+      <h3>Generar contrato y cotización</h3>
+
+      <div class="layout">
+        <!-- FORMULARIO -->
+        <form id="form" class="card">
+          <h4>Datos del contrato</h4>
+
+          <label>
+            No. de contrato
+            <!-- el usuario lo ve pero no lo edita -->
+            <input id="contractNo" type="text" readonly />
+          </label>
+
+          <label>
+            Nombre del cliente
+            <input id="clientName" type="text" placeholder="Ej. Juan Pérez" required />
+          </label>
+
+          <label>
+            Identificación (quién firmará)
+            <!-- Sugiere formatos para agjuntar identificación-->
+            <input id="idFile" type="file" accept=".jpg,.jpeg,.png,.pdf" required />
+          </label>
+
+          <div class="row">
+            <label>
+              Fecha inicio
+              <input id="startDate" type="date" required />
+            </label>
+
+            <label>
+              Fecha fin
+              <input id="endDate" type="date" required />
+            </label>
+          </div>
+
+          <h4>Pedido (cantidades)</h4>
+
+          <div class="row">
+            <label>
+              Andamio chico
+              <input id="qtySmall" type="number" min="0" value="0" />
+            </label>
+
+            <label>
+              Andamio grande
+              <input id="qtyBig" type="number" min="0" value="0" />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Plataformas metálicas
+              <input id="qtyPlat" type="number" min="0" value="0" />
+            </label>
+
+            <label>
+              Llantas (juego)
+              <input id="qtyWheels" type="number" min="0" value="0" />
+            </label>
+          </div>
+
+          <h4>Flete (opcional)</h4>
+
+          <label class="checkline">
+            <input id="useDelivery" type="checkbox" />
+            Agregar flete
+          </label>
+
+          <label id="deliveryBox" class="hidden">
+            Costo de flete ($)
+            <input id="deliveryFee" type="number" min="0" value="0" />
+          </label>
+
+          <div class="actions">
+            <!-- Botón: calcula y genera -->
+            <button type="button" class="btn btn--dark" id="btnGenerate">
+              Generar resumen
+            </button>
+
+            <!-- Botón: limpia formulario -->
+            <button type="reset" class="btn" id="btnReset">
+              Limpiar
+            </button>
+          </div>
+
+          <p class="muted small">
+            Recuerda que deberás presentar una identificación al momento de la entrega.
+          </p>
+        </form>
+
+        <!-- VISTA PREVIA -->
+        <aside class="card">
+          <h4>Resumen / Contrato (vista previa)</h4>
+
+          <div id="preview" class="preview">
+            <p class="muted">Completa el formulario y presiona “Generar resumen”.</p>
+          </div>
+
+          <div class="totalBox">
+            <div>Total estimado:</div>
+            <div id="total" class="total">$0</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <small>© 2026 Andamios Azules</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
