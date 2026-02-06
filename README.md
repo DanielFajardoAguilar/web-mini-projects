@@ -20,26 +20,6 @@ Catálogo tipo streaming con tarjetas y búsqueda.
 - Enfoque: grid de cards, estilos “dark UI” y filtrado simple con JS.
 - Carpeta: Peliculas/
 
-## Estructura del repo
-
-.
-├─ Cafeteria/
-│  ├─ index.html
-│  ├─ styles.css
-│  ├─ Estructura.css
-│  └─ img/
-├─ Negocio/
-│  ├─ index.html
-│  ├─ styles.css
-│  ├─ Estructura.css
-│  ├─ app.js
-│  └─ img/
-└─ Peliculas/
-   ├─ index.html
-   ├─ styles.css
-   ├─ Estructura.css
-   ├─ app.js
-   └─ img/
 
 Nota: Cada proyecto tiene su propio index.html y recursos locales (CSS/JS/imagenes).
 
