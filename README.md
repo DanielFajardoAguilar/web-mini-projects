@@ -25,6 +25,6 @@ Nota: Cada proyecto tiene su propio index.html y recursos locales (CSS/JS/imagen
 
 ## Cómo ejecutar
 
-Opción A) Abrir directo
+Abrir directo
 1. Entra a la carpeta del proyecto.
 2. Abre index.html con tu navegador.
